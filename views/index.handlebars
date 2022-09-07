@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAYS</title>
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"/>
+  </head>
+  <body>
+
+<nav class="p-3 bg-gray-50 rounded border-gray-200 dark:bg-gray-800 dark:border-gray-700 h-20">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+      <a href="#" class="flex items-center h-12">
+          <img src="/Telkom_(South_Africa)-Logo.wine.svg" class="mr-3 laptop:h-24 sm:h-10 w-32" alt="Flowbite Logo">
+      </a>
+      <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="navbar-solid-bg" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li>
+            <a href="/" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="/price_plans" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Price Plans</a>
+          </li>
+          <li>
+            <a href="/link_user" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Link Customer</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <div class="container h-screen w-screen flex flex-col items-center pt-12">
+        <div class="border-2 rounded-md border-purple-600 h-96 w-3/5"> 
+            <!-- create a form with username , usage string and a button to submit using tailwind css-->
+            <form action="/calc_bil" method="POST" class="flex flex-col items-center h-full">
+                <h1 class="text-3xl font-righteous pt-9">Calculate Total Phone Bill For Customer</h1>
+                <div class="flex flex-col items-center justify-center h-64">
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <label for="name" class="text-black pt-3">Username</label>
+                        <input type="text" name="name" id="name" class="border-2 border-blue-600 rounded-md p-2">
+                    </div>
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <label for="usage" class="text-black">Usage</label>
+                        <input type="text" name="usage" id="usage" class="border-2 border-blue-600 rounded-md p-2">
+                    </div>
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <button type="submit" class="bg-blue-600 text-white rounded-md p-2 mt-0">Calculate Total Phone Bill</button>
+                    </div>
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <div class="border-b-4 border-purple-600 h-9 w-24"></div>
+                    </div>
+                </div>
+            </form>
+
+                
+        </div>
+    </div>
+    <script src="https://unpkg.com/flowtheUser]);bite@1.5.3/dist/flowbite.js"></script>
+  </body>
+</html>

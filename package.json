@@ -1,13 +1,16 @@
 {
-  "name": "thamie",
+  "name": "phone-bill",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx tailwindcss -i ./public/css/style.css -o ./public/css/tailwind.css --watch",
+    "test": "mocha",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,13 @@
     "express": "^4.18.1",
     "express-flash": "^0.0.2",
     "express-handlebars": "^6.0.6",
-    "express-session": "^1.17.3"
+    "express-session": "^1.17.3",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "pg": "^8.8.0",
+    "pg-promise": "^10.12.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
   }
 }

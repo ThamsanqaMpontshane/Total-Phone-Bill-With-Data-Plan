@@ -11,9 +11,6 @@ function thePhoneBill(db){
     async function getTheUserPlan(name){
         return await db.manyOrNone("select price_plan from addUser where name = $1", [name]);
     }
-    async function getTheUserPrice(name){
-        return await db.manyOrNone("select sms_price, call_price from plans where plan_name = (select price_plan from addUser where name = $1)", [name]);
-    }
     async function getTheUserSms(name){
         return await db.manyOrNone("select sms_price from plans where plan_name = (select price_plan from addUser where name = $1)", [name]);
     }
@@ -21,20 +18,23 @@ function thePhoneBill(db){
         return await db.manyOrNone("select call_price from plans where plan_name = (select price_plan from addUser where name = $1)", [name]);
     }
     async function getTheUserSms100(){
-        return await db.manyOrNone("select name from addUser where price_plan = 'sms100'");
+        const theSms100 = await db.manyOrNone("select name from addUser where price_plan = 'sms100'");
+        // return the names of the users with the sms100 plan
+        return theSms100;
     }
     async function getTheUserCall100(){
-        return await db.manyOrNone("select name from addUser where price_plan = 'call100'");
+        const theCall100 = await db.manyOrNone("select name from addUser where price_plan = 'call100'");
+        return theCall100;
     }
     async function getTheUserTextMe(){
-        return await db.manyOrNone("select name from addUser where price_plan = 'text-me'");
+        const theText =await db.manyOrNone("select name from addUser where price_plan = 'text-me'");
+        return theText;
     }
     return {
         addUser,
         getThePlan,
         getTheUser,
         getTheUserPlan,
-        getTheUserPrice,
         getTheUserSms,
         getTheUserCall,
         getTheUserSms100,

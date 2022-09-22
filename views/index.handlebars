@@ -37,7 +37,7 @@
     <div class="container h-screen w-screen flex flex-col items-center pt-12">
         <div class="border-2 rounded-md border-purple-600 h-96 w-3/5"> 
             <!-- create a form with username , usage string and a button to submit using tailwind css-->
-            <form action="/calc_bil" method="POST" class="flex flex-col items-center h-full">
+            <form action="/calc_bill" method="POST" class="flex flex-col items-center h-full">
                 <h1 class="text-3xl font-righteous pt-9">Calculate Total Phone Bill For Customer</h1>
                 <div class="flex flex-col items-center justify-center h-64">
                     <div class="flex flex-col items-center justify-center h-full">
@@ -45,14 +45,19 @@
                         <input type="text" name="name" id="name" class="border-2 border-blue-600 rounded-md p-2">
                     </div>
                     <div class="flex flex-col items-center justify-center h-full">
-                        <label for="usage" class="text-black">Usage</label>
-                        <input type="text" name="usage" id="usage" class="border-2 border-blue-600 rounded-md p-2">
+                        <label for="theUsage" class="text-black">Usage</label>
+                        <input type="text" name="theUsage" id="theUsage" class="border-2 border-blue-600 rounded-md p-2">
                     </div>
                     <div class="flex flex-col items-center justify-center h-full">
                         <button type="submit" class="bg-blue-600 text-white rounded-md p-2 mt-0">Calculate Total Phone Bill</button>
                     </div>
                     <div class="flex flex-col items-center justify-center h-full">
-                        <div class="border-b-4 border-purple-600 h-9 w-24"></div>
+                        <div class="border-b-4 border-purple-600 h-9 w-24 text-center">R {{total}}</div>
+                    </div>
+                    <div class="text-center">
+                      {{#if messages.info}}
+                      <p class="error text-red-600">{{messages.info}}</p>
+                      {{/if}}
                     </div>
                 </div>
             </form>
@@ -60,6 +65,6 @@
                 
         </div>
     </div>
-    <script src="https://unpkg.com/flowtheUser]);bite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowtheUser;bite@1.5.3/dist/flowbite.js"></script>
   </body>
 </html>

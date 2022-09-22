@@ -22,4 +22,3 @@ VALUES ('call100', 2, 3);
 INSERT INTO plans (plan_name, sms_price, call_price)
 VALUES ('text-me', 3, 4);
 
-delete from addUser;
